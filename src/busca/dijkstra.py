@@ -7,6 +7,7 @@ from util import reverse_path
 
 
 def dijkstra(Grafo, start, goal):
+  """Busca em graph, um caminho entre start e goal usando Dijkstra."""
   dist, prev, Q = {}, {}, deque()
   for nodo in Grafo.nodos:
     dist[nodo] = float('inf')
@@ -24,7 +25,7 @@ def dijkstra(Grafo, start, goal):
     for key in prev.keys():
       if prev[key] != None
 	    analisados += 1
-    return (analisados, dist, [prev])
+    return (analisados, dist, [prev #falta recuperar o caminho])
 
   for v in Graph.vizinhos(u):
     if v in Q:
